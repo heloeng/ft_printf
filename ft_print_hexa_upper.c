@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printchar.c                                     :+:      :+:    :+:   */
+/*   ft_print_hexa_upper.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 15:54:19 by helde-so          #+#    #+#             */
-/*   Updated: 2024/11/26 18:15:40 by helde-so         ###   ########.fr       */
+/*   Created: 2024/11/26 17:01:59 by helde-so          #+#    #+#             */
+/*   Updated: 2024/11/26 18:23:40 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printchar(char c)
+int	ft_print_hexa_upper(unsigned long n)
 {
-	return (write(1, &c, 1));
+	int	count;
+
+	count = 0;
+	if (n >= 16)
+	count += ft_print_hexa_upper(n / 16);
+	ft_printchar("0123456789ABCDEF"[n % 16]);
+	return (count + 1);
 }
