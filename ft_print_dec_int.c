@@ -29,11 +29,7 @@ int	ft_print_dec_int(int n)
 		count++;
 	}
 	if (n >= 10)
-	{
-		count = count + ft_print_dec_int(n / 10);
-		count = count + ft_print_dec_int(n % 10);
-		return (count);
-	}
-	count += ft_printchar("0123456789"[n]);
-	return (count);
+	count += ft_print_dec_unsigned(n / 10);
+	ft_printchar("0123456789"[n % 10]);
+	return (count + 1);
 }
