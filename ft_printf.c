@@ -6,7 +6,7 @@
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:48:45 by helde-so          #+#    #+#             */
-/*   Updated: 2024/12/02 17:21:53 by helde-so         ###   ########.fr       */
+/*   Updated: 2024/12/02 18:38:02 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (count);
 }
-

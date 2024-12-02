@@ -6,7 +6,7 @@
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:56:18 by helde-so          #+#    #+#             */
-/*   Updated: 2024/12/02 18:34:29 by helde-so         ###   ########.fr       */
+/*   Updated: 2024/12/02 18:36:01 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_print_dec_int(int n)
 		count++;
 	}
 	if (n >= 10)
-	count += ft_print_dec_unsigned(n / 10);
+		count += ft_print_dec_unsigned(n / 10);
 	ft_printchar("0123456789"[n % 10]);
 	return (count + 1);
 }
